@@ -73,5 +73,7 @@ pipeline {
         sourceFiles: '')],
         usePromotionTimestamp: false,
         useWorkspaceInPromotion: false, verbose: false)])
+      }
+    }
   }
 }
