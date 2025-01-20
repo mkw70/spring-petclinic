@@ -9,7 +9,7 @@ pipeline {
   // Docker Hub 등록
   environment {
     DOCKERHUB_CREDENTIALS = credentials('dockerCredential')
-    AWS_CREDENTIALS = credentials('AWSCredential')
+    AWS_CREDENTIALS = credentials('AWSCredentials')
     //GIT_CREDENTIALS = credentials('gitCredential')
     REGION = 'ap-northeast-2'
   }
