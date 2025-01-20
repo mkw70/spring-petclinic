@@ -8,9 +8,9 @@ pipeline {
 
   // Docker Hub 등록
   environment {
-    DOCKERHUB_CREDENTIALS = credentials('dockerCredentials')
-    AWS_CREDENTIALS = credentials('AWSCredentials')
-    GIT_CREDENTIALS = credentials('gitCredentials')
+    DOCKERHUB_CREDENTIALS = credentials('dockerCredential')
+    AWS_CREDENTIALS = credentials('AWSCredential')
+    GIT_CREDENTIALS = credentials('gitCredential')
     REGION = 'ap-northeast-2'
   }
   
@@ -20,7 +20,7 @@ pipeline {
       steps {
         echo 'Gig Clone'
         git url: 'https://github.com/mkw70/spring-petclinic.git',
-          branch: 'main', credentialIdL: 'GIT_CREDNTIALS'
+          branch: 'main', credentialsId: 'GIT_CREDNTIALS'
       }
     }
   }
